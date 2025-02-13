@@ -61,7 +61,7 @@
             opacity: 0.8;
         }
     </style>
-</head>
+
 <body>
     <div class="gif-container">
         <img src="https://media4.giphy.com/media/KztT2c4u8mYYUiMKdJ/giphy.gif?cid=6c09b9522z9olj7pdqv4xkm8ofqncomohvx10pbslsfg545m&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Valentine's GIF">
@@ -110,8 +110,9 @@
             });
         });
     </script>
-</body>
+</body></head>
 </html>
+
 
 
 

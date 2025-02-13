@@ -20,14 +20,13 @@
         h1 {
             color: purple;
             margin-bottom: 20px;
-            z-index: 10;
             position: relative;
+            z-index: 2;
         }
         .button-container {
             display: flex;
             gap: 20px;
-            position: relative;
-            z-index: 10;
+            z-index: 2;
         }
         .but {
             background-color: rgb(79, 229, 79);
@@ -36,24 +35,26 @@
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
-            border-radius: 10%;
+            border-radius: 10px;
         }
         #button2 {
             background-color: rgb(235, 73, 73);
         }
         .gif-container {
             position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 300px;
-            height: auto;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .gif-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
         }
         .gif-container.shrink img {
             width: 300px;
@@ -98,14 +99,14 @@
                 $('#button1').css({
                     width: newWidth,
                     height: newHeight,
-                    fontSize: '+=6px'
+                    fontSize: '+=4px'
                 });
 
                 clickCount++;
             });
 
             $('#button1').on('click', function() {
-                $('h1').text("Yay! love you so much! 💞");
+                $('h1').text("Yay! Love you so much! 💞");
                 $('.button-container').hide();
                 $('.gif-container').addClass('shrink');
             });
@@ -113,4 +114,5 @@
     </script>
 </body>
 </html>
+
 

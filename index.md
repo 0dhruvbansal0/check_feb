@@ -20,6 +20,7 @@
         h1 {
             color: purple;
             margin-bottom: 20px;
+            font-size: 2rem;
             position: relative;
             z-index: 2;
         }
@@ -27,6 +28,7 @@
             display: flex;
             gap: 20px;
             z-index: 2;
+            position: relative;
         }
         .but {
             background-color: rgb(79, 229, 79);
@@ -36,6 +38,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             border-radius: 10px;
+            position: relative;
         }
         #button2 {
             background-color: rgb(235, 73, 73);
@@ -46,20 +49,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 1;
+            z-index: 0;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .gif-container img {
-            width: 100vw;
-            height: 100vh;
-            object-fit: contain;
-        }
-        .gif-container.shrink img {
-            width: 300px;
-            height: auto;
-            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -92,13 +91,10 @@
                 }
 
                 var currentWidth = $('#button1').outerWidth();
-                var currentHeight = $('#button1').outerHeight();
-                var newWidth = currentWidth * 1.5;
-                var newHeight = currentHeight * 1.5;
+                var newWidth = currentWidth * 1.3;
 
                 $('#button1').css({
                     width: newWidth,
-                    height: newHeight,
                     fontSize: '+=4px'
                 });
 
@@ -108,7 +104,6 @@
             $('#button1').on('click', function() {
                 $('h1').text("Yay! Love you so much! 💞");
                 $('.button-container').hide();
-                $('.gif-container').addClass('shrink');
             });
         });
     </script>

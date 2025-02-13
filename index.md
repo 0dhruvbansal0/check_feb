@@ -91,11 +91,14 @@
                 }
 
                 var currentWidth = $('#button1').outerWidth();
-                var newWidth = currentWidth * 1.3;
+                var currentHeight = $('#button1').outerHeight();
+                var newWidth = currentWidth * 2;
+                var newHeight = currentHeight * 2;
 
                 $('#button1').css({
                     width: newWidth,
-                    fontSize: '+=4px'
+                    height: newHeight,
+                    fontSize: '+=8px'
                 });
 
                 clickCount++;
@@ -109,5 +112,6 @@
     </script>
 </body>
 </html>
+
 
 

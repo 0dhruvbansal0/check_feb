@@ -15,16 +15,19 @@
             height: 100vh;
             margin: 0;
             overflow: hidden;
+            position: relative;
         }
         h1 {
             color: purple;
             margin-bottom: 20px;
-            z-index: 2;
+            z-index: 10;
+            position: relative;
         }
         .button-container {
             display: flex;
             gap: 20px;
-            z-index: 2;
+            position: relative;
+            z-index: 10;
         }
         .but {
             background-color: rgb(79, 229, 79);
@@ -33,27 +36,25 @@
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
+            border-radius: 10%;
         }
         #button2 {
             background-color: rgb(235, 73, 73);
         }
         .gif-container {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: auto;
             z-index: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         .gif-container img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: contain;
-}
-
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
         .gif-container.shrink img {
             width: 300px;
             height: auto;
@@ -67,8 +68,8 @@
     </div>
     <h1>Will You Be My Valentine??</h1>
     <div class="button-container">
-        <button class="but" id="button1" style="border-radius: 10%;">Yes</button>
-        <button class="but" id="button2" style="border-radius: 10%;">No</button>
+        <button class="but" id="button1">Yes</button>
+        <button class="but" id="button2">No</button>
     </div>
 
     <script>
@@ -91,13 +92,13 @@
 
                 var currentWidth = $('#button1').outerWidth();
                 var currentHeight = $('#button1').outerHeight();
-                var newWidth = currentWidth * 2;
-                var newHeight = currentHeight * 2;
+                var newWidth = currentWidth * 1.5;
+                var newHeight = currentHeight * 1.5;
 
                 $('#button1').css({
                     width: newWidth,
                     height: newHeight,
-                    fontSize: '+=8px'
+                    fontSize: '+=6px'
                 });
 
                 clickCount++;
@@ -112,3 +113,4 @@
     </script>
 </body>
 </html>
+
